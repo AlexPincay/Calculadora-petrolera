@@ -1,0 +1,21 @@
+a=int(input('Ingrese la variable que desea convertir a unidades petroleras: \n 0: Área \n 1: Presión \n 2: Longitud \n ')) #Pide al usuario ingresar las unidades
+if a==0: #Condicional para el valor ingresado de unidades y su conversión
+    b=float(input('Ingrese el valor del área (acres): '))
+    while b<1:                                           #Valida el valor ingresado
+        b=float(input(' Ingrese un número válido: '))
+    b=b*43560                                            #Realiza la transformación
+    print(f'El área es: {b:0.3f} ft^2')                  #Imprime el resultado
+elif a==1:
+    c=float(input('Ingrese el valor de la presión (bares): '))
+    while c<1:
+        c=float(input(' Ingrese un número válido: '))
+    c=c*14.5038
+    print(f'La presión es: {c:0.3f} psi')
+elif a==2:
+    d=float(input('Ingrese el valor de la longitud (metros): '))
+    while d<1:
+        d=float(input(' Ingrese un número válido: '))
+    d=d*3.28084
+    print(f'La longitud es: {d:0.3f} ft')
+else:
+    print('Dato no permitido') #En caso de no ingresar un valor permitido, imprime el dato como erroneo
